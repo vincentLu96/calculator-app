@@ -70,3 +70,20 @@ button:active {
 .zero {
     grid-column: span 2;
 }
+.scientific-buttons {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.scientific-buttons button {
+    padding: 12px 8px;
+    font-size: 0.9em;
+    background: #4caf50;
+    color: white;
+}
+
+.scientific-buttons button:hover {
+    background: #45a049;
+}

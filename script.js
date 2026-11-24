@@ -57,3 +57,42 @@ function calculatePercentage() {
         }, 1500);
     }
 }
+function scientificCalc(operation) {
+    try {
+        let value = eval(currentInput);
+        let result;
+        
+        switch(operation) {
+            case 'sin':
+                result = Math.sin(value * Math.PI / 180);
+                break;
+            case 'cos':
+                result = Math.cos(value * Math.PI / 180);
+                break;
+            case 'tan':
+                result = Math.tan(value * Math.PI / 180);
+                break;
+            case 'log':
+                result = Math.log10(value);
+                break;
+            case 'sqrt':
+                result = Math.sqrt(value);
+                break;
+            case 'pow':
+                result = Math.pow(value, 2);
+                break;
+            default:
+                result = value;
+        }
+        
+        currentInput = result.toString();
+        updateDisplay();
+    } catch (error) {
+        currentInput = 'Error';
+        updateDisplay();
+        setTimeout(() => {
+            currentInput = '0';
+            updateDisplay();
+        }, 1500);
+    }
+}
